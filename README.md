@@ -17,14 +17,14 @@ from kmer import kmer_featurization  # import the module kmer_featurization from
 seq_list = ['ATCGA', 'TCGAC']  # a list of DNA sequences
 
 k = 6  # choose the value for k
-obj = kmer_featurization()  # initialize a kmer_featurization object
+obj = kmer_featurization(k)  # initialize a kmer_featurization object
 kmer_features = obj.obtain_kmer_feature_for_a_list_of_sequences(seq_list, write_number_of_occurrences=False)
 # If you would like the k-mer features to be the percentage of occurrences (ranging from 0 to 1) as stated above, then leave write_number_of_occurrences as False (the default). If you prefer the features to be the counts for each k-mer occurrence, then set it to True.
 
 # If you just pass one sequence in string:
 seq = 'ATCGAGC'
 k = 6  
-obj = kmer_featurization() 
+obj = kmer_featurization(k) 
 kmer_feature = obj.obtain_kmer_feature_for_one_sequence(seq, write_number_of_occurrences=False)
 ```
 

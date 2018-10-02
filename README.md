@@ -5,11 +5,15 @@ This piece of Python code is for generating k-mer features for a list of DNA/ ge
 
 This code is carefully written to ensure efficiency. It runs sufficiently fast for a set of a very large number of sequences.
 
+The code is written in Python 3. 
+
 How to use this code:
 
 Example:
 
 ```python
+from kmer import kmer_featurization  # import the module kmer_featurization from the kmer.py file
+
 seq_list = ['ATCGA', 'TCGAC']  # a list of DNA sequences
 
 k = 6  # choose the value for k
